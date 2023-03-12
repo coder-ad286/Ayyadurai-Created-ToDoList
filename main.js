@@ -7,7 +7,6 @@ let contentEl = document.querySelector(".content");
 
 document.addEventListener("DOMContentLoaded",()=>{
 	let obj =[...JSON.parse(localStorage.getItem("ul"))];
-	console.log(obj)
     obj.forEach(value=>{
     	let newLiEl = document.createElement("li");
 	let newDivEl = document.createElement("div");
@@ -60,7 +59,7 @@ buttonEl.addEventListener("click",display);
 
 function display(event) {
 	if(inputEl.value.length<4){
-		
+		return;
 	}
 	event.preventDefault();
 	let newLiEl = document.createElement("li");
